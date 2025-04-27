@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideal Institute - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9f7fd; /* Light blue background */
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #004d7a; /* Deep blue */
+            padding: 20px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease;
+        }
+
+        .navbar .logo {
+            color: #fff;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: slideInLeft 1.5s ease-out;
+        }
+
+        .nav-links a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #ff7f50; /* Coral color on hover */
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #ff7f50;
+            bottom: -5px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 100px 20px;
+            text-align: center;
+            animation: fadeInUp 1.5s ease;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 40px auto;
+            max-width: 800px;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: scale(1.05);
+        }
+
+        .section h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #004d7a;
+            font-family: 'Roboto', sans-serif;
+            animation: fadeInText 1.5s ease-out;
+        }
+
+        .section p {
+            font-size: 22px;
+            color: #555;
+            font-weight: 400;
+            line-height: 1.6;
+            animation: fadeInText 2s ease-out;
+        }
+
+        /* Contact Button */
+        .contact-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #ff7f50; /* Coral color */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            animation: blink 1.5s infinite alternate;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #004d7a;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            animation: fadeIn 2s ease;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Ideal Institute</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="notes.html">Notes</a>
+            <a href="exams.html">Exams</a>
+            <a href="announcements.html">Announcements</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="section">
+        <h1>Welcome to Ideal Institute</h1>
+        <p>Your gateway to academic excellence. Join us to unlock your potential and excel in your academic journey!</p>
+        <!-- Contact Us Button -->
+        <a href="https://forms.gle/your-google-form-link" class="contact-btn">Contact Us</a>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Ideal Institute. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

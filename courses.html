@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Courses | Ideal Institute</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fc; /* Light pastel background */
+      animation: fadeIn 1s ease-out;
+      color: #333;
+    }
+
+    header {
+      background: #FF6F61; /* Soft coral color */
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: slideIn 1.5s ease-out;
+    }
+
+    nav {
+      background: #2E3B4E; /* Dark blue-gray */
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInNav 1.5s ease-out;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #FF6F61; /* Hover effect to match header */
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 20px;
+      animation: fadeInContent 2s ease-out;
+    }
+
+    footer {
+      background: #2E3B4E;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      margin-top: 30px;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Courses Section Special Styling */
+    .courses-section {
+      max-width: 1100px;
+      margin: auto;
+      animation: slideUp 1s ease-out;
+    }
+
+    .courses-section h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 32px;
+      animation: bounce 1s ease;
+      color: #FF6F61; /* Add vibrant color to heading */
+    }
+
+    .course-category {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .course-category:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      background-color: #FFEBCC; /* Light yellow hover */
+    }
+
+    .course-category h3 {
+      color: #4CAF50; /* Green header */
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      font-size: 28px;
+      text-transform: uppercase;
+    }
+
+    .course-category ul {
+      list-style: none;
+      padding: 0;
+      font-size: 18px;
+      animation: fadeInList 2s ease-out;
+    }
+
+    .course-category ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      color: #555;
+    }
+
+    .course-category ul li:last-child {
+      border-bottom: none;
+    }
+
+    /* Keyframes for Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInNav {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInContent {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(-10px);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes fadeInList {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Ideal Institute</h1>
+  <p>Courses We Offer</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="courses.html">Courses</a>
+  <a href="notes.html">Notes</a>
+  <a href="exams.html">Exam Updates</a>
+  <a href="announcements.html">Announcements</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section class="courses-section">
+  <h2>Our Courses</h2>
+
+  <div class="course-category">
+    <h3>Class 9</h3>
+    <ul>
+      <li>📘 Physics</li>
+      <li>🧪 Chemistry</li>
+      <li>➗ Mathematics</li>
+      <li>📝 English</li>
+      <li>🗣️ Hindi</li>
+    </ul>
+  </div>
+
+  <div class="course-category">
+    <h3>Class 10</h3>
+    <ul>
+      <li>🔬 Science</li>
+      <li>➗ Maths</li>
+      <li>🌍 Social Science</li>
+      <li>📝 English</li>
+      <li>🗣️ Hindi</li>
+    </ul>
+  </div>
+
+  <div class="course-category">
+    <h3>Class 11 & 12</h3>
+    <ul>
+      <li>📘 Physics</li>
+      <li>🧪 Chemistry</li>
+      <li>➗ Maths</li>
+      <li>🧬 Biology</li>
+      <li>📝 English</li>
+      <li>🗣️ Hindi</li>
+    </ul>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2025 Ideal Institute. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

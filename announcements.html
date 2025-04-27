@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideal Institute - Announcements</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Body and Navbar Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #004d7a;
+            padding: 20px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar .logo {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        /* Announcement Section Styling */
+        .announcement-section {
+            padding: 50px 20px;
+            background-color: white;
+            margin: 40px auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 1000px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #004d7a;
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Announcement Card */
+        .announcement-card {
+            background-color: #e6f7ff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .announcement-card:hover {
+            transform: scale(1.02);
+            background-color: #cce6ff;
+        }
+
+        .announcement-card .title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #004d7a;
+        }
+
+        .announcement-card .date {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .announcement-card .content {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .announcement-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .announcement-buttons button {
+            padding: 8px 15px;
+            font-size: 14px;
+            color: white;
+            background-color: #004d7a;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .announcement-buttons button:hover {
+            background-color: #ff7f50;
+        }
+
+        /* Form Styling for Adding New Announcements */
+        .announcement-form {
+            margin-top: 30px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .announcement-form input, .announcement-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .announcement-form button {
+            padding: 12px 20px;
+            font-size: 18px;
+            background-color: #004d7a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .announcement-form button:hover {
+            background-color: #ff7f50;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Ideal Institute</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="notes.html">Notes</a>
+            <a href="exams.html">Exams</a>
+            <a href="announcements.html">Announcements</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Announcement Section -->
+    <section class="announcement-section">
+        <h1>Latest Announcements</h1>
+
+        <!-- Display Announcements -->
+        <div id="announcement-list">
+            <!-- Example Announcement Card -->
+            <div class="announcement-card">
+                <div class="title">Exam Schedule Released</div>
+                <div class="date">Date: 5th May 2025</div>
+                <div class="content">Sunday ko party hua tha <b/>sprite aur bhujiaa ka<b/> .</div>
+                <div class="announcement-buttons">
+                    <button onclick="editAnnouncement(this)">Edit</button>
+                    <button onclick="deleteAnnouncement(this)">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form to Add New Announcement -->
+        <div class="announcement-form">
+            <h2>Add New Announcement</h2>
+            <input type="text" id="announcement-title" placeholder="Title of the Announcement" required>
+            <textarea id="announcement-content" rows="4" placeholder="Announcement Content" required></textarea>
+            <button onclick="addAnnouncement()">Add Announcement</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Ideal Institute. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript to Manage Announcements -->
+    <script>
+        // Add Announcement Function
+        function addAnnouncement() {
+            let title = document.getElementById('announcement-title').value;
+            let content = document.getElementById('announcement-content').value;
+            
+            if (title && content) {
+                let announcementList = document.getElementById('announcement-list');
+                let newAnnouncement = document.createElement('div');
+                newAnnouncement.classList.add('announcement-card');
+                
+                newAnnouncement.innerHTML = `
+                    <div class="title">${title}</div>
+                    <div class="date">Date: ${new Date().toLocaleDateString()}</div>
+                    <div class="content">${content}</div>
+                    <div class="announcement-buttons">
+                        <button onclick="editAnnouncement(this)">Edit</button>
+                        <button onclick="deleteAnnouncement(this)">Delete</button>
+                    </div>
+                `;
+                
+                announcementList.appendChild(newAnnouncement);
+                
+                // Clear form fields
+                document.getElementById('announcement-title').value = '';
+                document.getElementById('announcement-content').value = '';
+            } else {
+                alert('Please fill in both title and content!');
+            }
+        }
+
+        // Edit Announcement Function
+        function editAnnouncement(button) {
+            let announcementCard = button.closest('.announcement-card');
+            let title = announcementCard.querySelector('.title').textContent;
+            let content = announcementCard.querySelector('.content').textContent;
+            
+            document.getElementById('announcement-title').value = title;
+            document.getElementById('announcement-content').value = content;
+
+            // Delete the announcement from the list
+            deleteAnnouncement(button);
+        }
+
+        // Delete Announcement Function
+        function deleteAnnouncement(button) {
+            let announcementCard = button.closest('.announcement-card');
+            announcementCard.remove();
+        }
+    </script>
+</body>
+</html>

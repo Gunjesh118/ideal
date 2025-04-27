@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideal Institute - Notes</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+            background-size: cover;
+            animation: backgroundAnimation 20s infinite linear;
+            color: white;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            transition: background-color 0.5s ease;
+        }
+
+        .navbar:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .navbar .logo {
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff6f61;
+        }
+
+        /* Notes Section Styling */
+        .notes-section {
+            padding: 50px 20px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            max-width: 1200px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1, h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-family: 'Roboto', sans-serif;
+            color: #00c6ff;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: tableAnimation 1.5s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #0072ff;
+            color: white;
+            font-size: 18px;
+            animation: bounceIn 1s ease;
+        }
+
+        td {
+            background-color: #f4f4f4;
+            color: #333;
+            font-size: 16px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        td:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        td a {
+            color: #0072ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        td a:hover {
+            color: #ff6f61;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideInFromTop {
+            0% { transform: translateY(-100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(to bottom right, #00c6ff, #0072ff); }
+            50% { background: linear-gradient(to bottom right, #ff6f61, #ff9a8b); }
+            100% { background: linear-gradient(to bottom right, #00c6ff, #0072ff); }
+        }
+
+        @keyframes tableAnimation {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar .logo {
+                font-size: 24px;
+            }
+
+            .nav-links a {
+                font-size: 16px;
+                margin: 0 10px;
+            }
+
+            h1, h2 {
+                font-size: 28px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Ideal Institute</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="notes.html">Notes</a>
+            <a href="exams.html">Exams</a>
+            <a href="announcements.html">Announcements</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Notes Section -->
+    <section class="notes-section">
+        <h1>Subject-wise Notes</h1>
+
+        <div class="heading">
+            <h2>Class 9th, 10th, 11th, and 12th Notes</h2>
+            <p>Click on the subject links to download the notes in PDF format.</p>
+        </div>
+
+        <!-- Class 9th Notes Table -->
+        <h2>Class 9th</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Download Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hindi</td>
+                    <td><a href="path/to/hindi_class9.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td><a href="path/to/english_class9.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Science</td>
+                    <td><a href="path/to/physics_class9.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Social science</td>
+                    <td><a href="path/to/chemistry_class9.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Mathematics</td>
+                    <td><a href="path/to/maths_class9.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Sanskrit</td>
+                    <td><a href="path/to/sanskrit_class9.pdf" target="_blank">Download</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Class 10th Notes Table -->
+        <h2>Class 10th</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Download Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hindi</td>
+                    <td><a href="path/to/hindi_class10.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td><a href="path/to/english_class10.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Science</td>
+                    <td><a href="path/to/physics_class10.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Social science</td>
+                    <td><a href="path/to/chemistry_class10.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Mathematics</td>
+                    <td><a href="path/to/maths_class10.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Sanskrit</td>
+                    <td><a href="path/to/sanskrit_class10.pdf" target="_blank">Download</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Class 11th Notes Table -->
+        <h2>Class 11th</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Download Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hindi</td>
+                    <td><a href="path/to/hindi_class11.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td><a href="path/to/english_class11.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Physics</td>
+                    <td><a href="path/to/physics_class11.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Chemistry</td>
+                    <td><a href="path/to/chemistry_class11.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Mathematics</td>
+                    <td><a href="path/to/maths_class11.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Biology</td>
+                    <td><a href="path/to/biology_class11.pdf" target="_blank">Download</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Class 12th Notes Table -->
+        <h2>Class 12th</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Download Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hindi</td>
+                    <td><a href="path/to/hindi_class12.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td><a href="path/to/english_class12.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Physics</td>
+                    <td><a href="path/to/physics_class12.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Chemistry</td>
+                    <td><a href="path/to/chemistry_class12.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Mathematics</td>
+                    <td><a href="path/to/maths_class12.pdf" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Biology</td>
+                    <td><a href="path/to/biology_class12.pdf" target="_blank">Download</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+</body>
+</html>

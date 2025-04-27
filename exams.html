@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideal Institute - Exam Section</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #004d7a;
+            padding: 20px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar .logo {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        /* Exam Section Styling */
+        .exam-section {
+            padding: 50px 20px;
+            background-color: white;
+            margin: 40px auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 1000px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #004d7a;
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Exam Table */
+        .exam-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            animation: fadeIn 2s ease;
+        }
+
+        .exam-table th, .exam-table td {
+            padding: 12px 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            background-color: #e6f7ff;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .exam-table th {
+            background-color: #004d7a;
+            color: white;
+        }
+
+        .exam-table tr:hover {
+            background-color: #cce6ff;
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+
+        /* Exam Timer Styling */
+        .exam-timer {
+            text-align: center;
+            font-size: 24px;
+            background-color: #ffcccb;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px auto;
+            width: 70%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Feedback Button */
+        .feedback-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 18px;
+            background-color: #004d7a;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 20px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .feedback-btn:hover {
+            background-color: #ff7f50;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Ideal Institute</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="notes.html">Notes</a>
+            <a href="exams.html">Exams</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="exam-section">
+        <h1>Upcoming Exams Schedule</h1>
+
+        <!-- Exam Table -->
+        <table class="exam-table">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th>Subject</th>
+                    <th>Exam Date</th>
+                    <th>Exam Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 9th Class Exams -->
+                <tr>
+                    <td>9th</td>
+                    <td>Mathematics</td>
+                    <td>10th May 2025</td>
+                    <td>9:00 AM - 12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>9th</td>
+                    <td>Science</td>
+                    <td>12th May 2025</td>
+                    <td>9:00 AM - 12:00 PM</td>
+                </tr>
+                <!-- 10th Class Exams -->
+                <tr>
+                    <td>10th</td>
+                    <td>English</td>
+                    <td>14th May 2025</td>
+                    <td>10:00 AM - 1:00 PM</td>
+                </tr>
+                <tr>
+                    <td>10th</td>
+                    <td>Social Studies</td>
+                    <td>16th May 2025</td>
+                    <td>10:00 AM - 1:00 PM</td>
+                </tr>
+                <!-- 11th Class Exams -->
+                <tr>
+                    <td>11th</td>
+                    <td>Physics</td>
+                    <td>18th May 2025</td>
+                    <td>10:00 AM - 1:00 PM</td>
+                </tr>
+                <tr>
+                    <td>11th</td>
+                    <td>Chemistry</td>
+                    <td>20th May 2025</td>
+                    <td>10:00 AM - 1:00 PM</td>
+                </tr>
+                <!-- 12th Class Exams -->
+                <tr>
+                    <td>12th</td>
+                    <td>Mathematics</td>
+                    <td>22nd May 2025</td>
+                    <td>10:00 AM - 1:00 PM</td>
+                </tr>
+                <tr>
+                    <td>12th</td>
+                    <td>Biology</td>
+                    <td>24th May 2025</td>
+                    <td>10:00 AM - 1:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Exam Timer -->
+        <div class="exam-timer">
+            <p>Next Exam: <strong>Physics - Class 11</strong></p>
+            <p>Time Left: <span id="timer">00:30:00</span></p>
+        </div>
+
+        <!-- Feedback Button -->
+        <a href="https://forms.gle/your-google-form-link" class="feedback-btn">Submit Feedback</a>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Ideal Institute. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Timer -->
+    <script>
+        // Exam countdown timer functionality
+        const timerElement = document.getElementById('timer');
+        let examTime = 30 * 60; // 30 minutes in seconds
+
+        function updateTimer() {
+            let minutes = Math.floor(examTime / 60);
+            let seconds = examTime % 60;
+
+            if (seconds < 10) {
+                seconds = '0' + seconds;
+            }
+
+            timerElement.textContent = `${minutes}:${seconds}`;
+
+            if (examTime > 0) {
+                examTime--;
+            } else {
+                clearInterval(timerInterval);
+                alert("Exam Time is over!");
+            }
+        }
+
+        let timerInterval = setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
